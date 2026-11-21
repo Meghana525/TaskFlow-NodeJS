@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>TaskFlow</h1>
+        <p>Organize your work. Achieve your goals.</p>
+    </header>
+
+    <main class="container">
+
+        <section class="stats">
+            <div class="stat-card">
+                <h2 id="total">0</h2>
+                <p>Total Tasks</p>
+            </div>
+            <div class="stat-card">
+                <h2 id="pending">0</h2>
+                <p>Pending</p>
+            </div>
+            <div class="stat-card">
+                <h2 id="completed">0</h2>
+                <p>Completed</p>
+            </div>
+        </section>
+
+        <section class="form-card">
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter task title"
+                    required
+                >
+
+                <textarea
+                    id="description"
+                    placeholder="Enter task description"
+                ></textarea>
+
+                <button type="submit">+ Add Task</button>
+            </form>
+        </section>
+
+        <section class="tasks-section">
+            <h2>My Tasks</h2>
+
+            <div class="filters">
+                <button class="active" data-filter="all">All</button>
+                <button data-filter="pending">Pending</button>
+                <button data-filter="completed">Completed</button>
+            </div>
+
+            <div id="taskList"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Built with Node.js and Express.js | TaskFlow</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
